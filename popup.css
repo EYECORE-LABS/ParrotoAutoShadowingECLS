@@ -1,0 +1,36 @@
+/* Parroto EYECORE LABS — basic red / blue / white */
+:root {color-scheme:light;--red:#e20b27;--blue:#0648b7;--navy:#0b224e;--paper:#fff;--soft:#f2f6ff;--border:#dce5f4}
+*{box-sizing:border-box}
+body{margin:0;min-width:348px;background:#eef3fc;color:var(--navy);font:13px/1.5 Arial,system-ui,sans-serif}
+.shell{width:360px;max-width:100%;padding:18px;background:var(--paper)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-icon{width:52px;height:52px;border-radius:13px;overflow:hidden;flex:none;border:1px solid var(--border)}
+.brand-icon img{width:100%;height:100%;object-fit:contain}
+.eyebrow{font-size:10px;letter-spacing:1.2px;color:var(--blue);font-weight:700}
+h1{margin:0;font-size:23px;line-height:1.2;letter-spacing:-.6px;color:var(--navy)}
+h1 span{color:var(--red)}
+.divider{height:2px;background:linear-gradient(90deg,var(--red),var(--blue));margin:16px 0}
+.section-header,.fps-box{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--blue)}
+.indicator{background:#edf3ff;color:var(--blue);padding:4px 9px;border-radius:20px;letter-spacing:0}
+.score-wrap{display:flex;align-items:center;justify-content:center;gap:14px;background:var(--soft);border:1px solid var(--border);border-radius:12px;margin:12px 0;padding:12px}
+.big-score{font-size:43px;color:var(--red);line-height:1;font-weight:800}
+.score-label{font-size:11px;color:var(--navy);font-weight:700}.score-label small{color:#6b7891}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:13px}
+.stats>div,.phrase,.fps-box{border:1px solid var(--border);border-radius:10px;background:white;padding:10px}
+.stats label,.phrase>span{display:block;font-size:10px;font-weight:700;letter-spacing:.5px;color:#5c7192}
+.stats strong{display:block;font-size:15px;margin-top:3px;color:var(--navy);overflow-wrap:anywhere}
+.option{display:flex;align-items:center;gap:9px;margin:12px 0;color:var(--navy);cursor:pointer}
+.option input{accent-color:var(--blue)}
+.output-option{justify-content:space-between}
+.output-option select{font:inherit;color:var(--navy);background:var(--paper);border:1px solid var(--border);border-radius:7px;padding:6px 8px}
+.notice{border-left:3px solid var(--blue);background:var(--soft);padding:9px 11px;border-radius:5px;margin:12px 0;color:#385477}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+button{font:700 12px Arial,system-ui,sans-serif;cursor:pointer;border-radius:9px;padding:12px 8px;border:1px solid var(--border);transition:filter .15s}
+button:hover{filter:brightness(.96)}
+button:disabled{opacity:.55;cursor:not-allowed}
+.primary{background:var(--red);color:white;border-color:var(--red)}
+.secondary{background:var(--blue);color:white;border-color:var(--blue)}
+.fps-box{background:var(--soft);margin:10px 0;color:var(--blue)}
+.phrase{margin:10px 0}.phrase strong{display:block;font-size:13px;margin-top:6px;overflow-wrap:anywhere}
+.test{display:block;width:100%;margin-top:8px;background:white;color:var(--blue);border:1px solid #b9cbe9;text-align:center}
+.foot{text-align:center;color:#6a7c98;font-size:9px;margin-top:15px;letter-spacing:.4px}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parroto Auto Shadowing</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="shell">
+    <div class="brand"><div class="brand-icon"><img src="icons/icon48.png" alt="Parroto"></div><div><div class="eyebrow" id="version">EYECORE LABS</div><h1>PARROTO<span>AUTO</span></h1></div></div>
+    <div class="divider"></div>
+    <div class="section-header"><span>SHADOWING / NO API</span><span id="indicator" class="indicator">IDLE</span></div>
+    <div class="score-wrap"><strong id="score" class="big-score">--</strong><span class="score-label">LAST SCORE<br><small>/ 100</small></span></div>
+    <div class="stats"><div><label>BẢN CHÉP</label><strong id="counter">0/0</strong></div><div><label>TRẠNG THÁI</label><strong id="mode">READY</strong></div></div>
+    <label class="option"><input type="checkbox" id="autoAds" checked><span>Tự đóng popup quảng cáo</span></label>
+    <label class="option output-option">
+      <span>Đầu ra giọng đọc</span>
+      <select id="audioOutput" disabled>
+        <option value="speaker-and-mic">Loa ngoài + mic ảo</option>
+        <option value="mic-only">Chỉ mic ảo</option>
+      </select>
+    </label>
+    <div id="notice" class="notice">Mở bài Shadowing trong tab parroto.app.</div>
+    <div class="buttons"><button id="start" class="primary" disabled>▶ START AUTO</button><button id="stop" class="secondary" disabled>■ STOP</button></div>
+    <button id="manual" class="test" disabled>ĐỌC KHI BẤM GHI ÂM</button>
+    <div class="fps-box"><span>VIDEO / DOM</span><strong id="fps">-- FPS</strong></div>
+    <div class="phrase"><span>NỘI DUNG ĐANG NHẬN DIỆN</span><strong id="phrase">Chưa nhận diện</strong></div>
+    <button id="test" class="test" disabled>♫ ĐỌC THỬ CÂU ĐANG HIỂN THỊ</button>
+    <button id="diagnostics" class="test">☷ CHÉP NHẬT KÝ CHẨN ĐOÁN</button>
+    <div class="foot">10 FPS TAB + DOM · NO API KEY · ONLINE PCM</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

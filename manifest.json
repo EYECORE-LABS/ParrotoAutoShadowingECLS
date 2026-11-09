@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "Parroto Auto Shadowing | EYECORE LABS",
+  "short_name": "Parroto Shadow",
+  "version": "0.8.4",
+  "minimum_chrome_version": "116",
+  "description": "Shadowing tự động hoặc khi bấm ghi âm. Giọng tiếng Anh trực tuyến qua mic ảo, có tùy chọn phát qua loa.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting",
+    "tabCapture",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "https://parroto.app/*",
+    "https://www.parroto.app/*",
+    "https://translate.google.com/*",
+    "https://translate.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Parroto Auto Shadowing",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://parroto.app/*",
+        "https://www.parroto.app/*"
+      ],
+      "js": [
+        "bridge-main.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://parroto.app/*",
+        "https://www.parroto.app/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "world": "ISOLATED",
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
